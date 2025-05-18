@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clonar Repositorio') {
             steps {
-                git 'https://github.com/ryleecito/Proyecto-Redes.git'
+                git branch: 'main', url: 'https://github.com/ryleecito/Proyecto-Redes.git'
             }
         }
 
