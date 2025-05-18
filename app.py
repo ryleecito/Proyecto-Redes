@@ -1,0 +1,1 @@
+return '¡Hola desde Flask en Docker en Azure - versión 2!'
