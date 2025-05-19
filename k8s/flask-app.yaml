@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flask-pod
+  labels:
+    app: flask
+spec:
+  containers:
+    
+name: flask-container
+    image: ryleecito/flask-app:latest
+    imagePullPolicy: Always
+    ports:
+containerPort: 5000,
+,
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-service
+spec:
+  selector:
+    app: flask
+  ports:
+    
+port: 80
+    targetPort: 5000
+type: LoadBalancer
