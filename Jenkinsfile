@@ -33,7 +33,7 @@ pipeline {
 
         stage('Desplegar en Kubernetes') {
             steps {
-                sh 'kubectl set image deployment/flask-deployment flask-container=$IMAGE_NAME'
+                sh 'kubectl apply -f flask-app.yaml'
             }
         }
     }
