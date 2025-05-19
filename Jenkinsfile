@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         DOCKER_CREDENTIALS = credentials('dockerhub-access')
+        IMAGE_NAME = 'ryleecito/flask-app'
     }
 
     stages {
@@ -14,7 +15,7 @@ pipeline {
 
         stage('Construir Imagen Docker') {
             steps {
-                sh 'docker build -t ryleecito/flask-app .'
+                sh 'docker build -t $IMAGE_NAME .'
             }
         }
 
@@ -26,7 +27,13 @@ pipeline {
 
         stage('Push a Docker Hub') {
             steps {
-                sh 'docker push ryleecito/flask-app'
+                sh 'docker push $IMAGE_NAME'
+            }
+        }
+
+        stage('Desplegar en Kubernetes') {
+            steps {
+                sh 'kubectl set image deployment/flask-deployment flask-container=$IMAGE_NAME'
             }
         }
     }
