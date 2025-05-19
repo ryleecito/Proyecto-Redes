@@ -4,6 +4,7 @@ pipeline {
     environment {
         DOCKER_CREDENTIALS = credentials('dockerhub-access')
         IMAGE_NAME = 'ryleecito/flask-app'
+        KUBECONFIG = '/home/azureuser/.kube/config'
     }
 
     stages {
