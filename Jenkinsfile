@@ -33,7 +33,7 @@ pipeline {
 
         stage('Desplegar en Kubernetes') {
             steps {
-                sh 'kubectl apply -f flask-app.yaml'
+              sh 'kubectl apply -f k8s/flask-app.yaml'
             }
         }
     }
