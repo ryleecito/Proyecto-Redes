@@ -35,6 +35,7 @@ pipeline {
         stage('Desplegar en Kubernetes') {
             steps {
               sh 'kubectl apply -f k8s/flask-app.yaml'
+              sh 'kubectl rollout restart deployment flask-deployment'
             }
         }
     }
