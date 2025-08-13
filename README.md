@@ -311,37 +311,3 @@ kubectl scale deployment flask-app --replicas=5
 kubectl autoscale deployment flask-app --cpu-percent=70 --min=2 --max=10
 ```
 
-### Performance Optimization
-
-- Use **Gunicorn** or **uWSGI** for production
-- Implement **caching** for static content
-- Configure **load balancing**
-- Monitor **resource usage**
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 📞 Support
-
-- **Issues:** [GitHub Issues](https://github.com/yourusername/flask-microservice/issues)
-- **Documentation:** [Wiki](https://github.com/yourusername/flask-microservice/wiki)
-- **Discussions:** [GitHub Discussions](https://github.com/yourusername/flask-microservice/discussions)
-
----
-
-**Happy Coding!** 🚀✨
