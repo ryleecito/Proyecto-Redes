@@ -200,38 +200,6 @@ for i in {1..100}; do curl http://localhost:5000/; done
 
 ---
 
-## 📊 Monitoring and Observability
-
-### Health Endpoints
-
-- **Health Check:** `/health` - Returns application status
-- **Metrics:** `/metrics` - Application metrics (if enabled)
-- **Info:** `/info` - Application information
-
-### Logging
-
-The application uses structured logging with different levels:
-
-```python
-import logging
-
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-```
-
----
-
-## 🔧 Configuration
-
-### Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `FLASK_ENV` | Flask environment | `production` |
-| `FLASK_DEBUG` | Debug mode | `False` |
-| `PORT` | Application port | `5000` |
-| `HOST` | Application host | `0.0.0.0` |
 
 ### Production Configuration
 
