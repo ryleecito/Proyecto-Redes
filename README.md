@@ -246,59 +246,6 @@ gunicorn --bind 0.0.0.0:5000 app:app
 ```
 
 ---
-
-## 🚨 Troubleshooting
-
-### Common Issues
-
-**Application won't start:**
-```bash
-# Check Python version
-python --version
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Check port availability
-netstat -an | grep 5000
-```
-
-**Docker issues:**
-```bash
-# Check Docker daemon
-docker info
-
-# View container logs
-docker logs flask-app
-
-# Debug container
-docker exec -it flask-app /bin/sh
-```
-
-**Kubernetes issues:**
-```bash
-# Check cluster connection
-kubectl cluster-info
-
-# Check pod status
-kubectl describe pod <pod-name>
-
-# Check service endpoints
-kubectl get endpoints
-```
-
----
-
-## 🔐 Security Considerations
-
-- **Non-root container:** Application runs as non-privileged user
-- **Minimal base image:** Uses Alpine Linux for smaller attack surface
-- **No secrets in code:** Use environment variables or Kubernetes secrets
-- **HTTPS in production:** Configure reverse proxy with SSL/TLS
-- **Regular updates:** Keep dependencies and base images updated
-
----
-
 ## 📈 Scaling and Performance
 
 ### Horizontal Scaling
